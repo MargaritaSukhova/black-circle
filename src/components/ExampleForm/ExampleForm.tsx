@@ -1,4 +1,5 @@
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { Input } from '@mui/material';
 
 interface IFormInput {
@@ -6,6 +7,8 @@ interface IFormInput {
 }
 
 export default function ExampleForm() {
+  const { t } = useTranslation();
+
   const { control, handleSubmit } = useForm({
     defaultValues: {
       firstName: '',
@@ -23,7 +26,7 @@ export default function ExampleForm() {
         control={control}
         render={({ field }) => <Input {...field} />}
       />
-      <input type="submit" />
+      <button type="submit"> {t('exampleText.submitButton')} </button>
     </form>
   );
 }
