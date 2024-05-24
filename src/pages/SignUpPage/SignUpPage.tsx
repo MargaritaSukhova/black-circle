@@ -4,7 +4,6 @@ function SignUpPage() {
   return (
     <div>
       <ExampleForm />
-      <div style={{ color: 'red' }}>Hello</div>
     </div>
   );
 }
