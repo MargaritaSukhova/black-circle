@@ -1,5 +1,11 @@
+import ExampleForm from '../../components/ExampleForm';
+
 function SignUpPage() {
-  return <div>Sign Up</div>;
+  return (
+    <div>
+      <ExampleForm />
+    </div>
+  );
 }
 
 export default SignUpPage;
